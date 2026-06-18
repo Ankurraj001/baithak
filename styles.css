@@ -263,7 +263,7 @@ h3 {
 
 .intro p:last-child,
 .events-copy p,
-.reference p {
+.full-menu p {
   color: var(--muted);
   font-size: clamp(17px, 2vw, 21px);
   line-height: 1.7;
@@ -395,15 +395,26 @@ address {
   font-weight: 900;
 }
 
-.reference {
-  display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(260px, 380px);
-  gap: clamp(28px, 6vw, 84px);
-  align-items: center;
+.full-menu {
   background: #efe5d3;
 }
 
-.reference img {
+.full-menu > div:first-child {
+  max-width: 820px;
+  margin-bottom: 34px;
+}
+
+.menu-pages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 34px);
+}
+
+.menu-pages figure {
+  margin: 0;
+}
+
+.menu-pages img {
   width: 100%;
   border-radius: 8px;
   box-shadow: var(--shadow);
@@ -475,7 +486,8 @@ address {
   .menu-grid,
   .events,
   .location,
-  .reference {
+  .full-menu,
+  .menu-pages {
     grid-template-columns: 1fr;
   }
 
